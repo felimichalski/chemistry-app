@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tabla periodica interactiva</title>
+    <style>
+
+    body {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .periodo {
+      width: 972px;
+      height: 64px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .container {
+      width: 1010px;
+      height: 478px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .elemento {
+      width: 50px;
+      height: 60px;
+      border-radius: 5px;
+      margin-right: 4px;
+      margin-bottom: 4px;
+      line-height: 1px;
+      font-family: Comic, sans-serif;
+      cursor: pointer;
+    }
+
+    .numh {
+      width: 50px;
+      height: 26px;
+      text-align: center;
+      font-size: 10px;
+      color: white;
+      margin-bottom: 4px;
+
+    }
+
+    .volver {
+      text-decoration: none;
+      font-weight: 150px;
+      font-size: 10px;
+      font-family: sans-serif;
+      color:#333333;
+      padding-top:4px;
+      padding-bottom:4px;
+      padding-left:4px;
+      padding-right:4px;
+      background-color:#FFD27D;
+      border-color: #FFD27D;
+      border-width: 3px;
+      border-style: solid;
+      border-radius:35px;
+    }
+
+    .numv {
+      width: 14px;
+      height: 60px;
+      border-radius: 5px;
+      margin-right: 4px;
+      margin-bottom: 4px;
+      background-color: black;
+      position: absolute;
+      color: white;
+      text-align: center;
+    }
+
+    #titulo {
+      text-align: center;
+      font-weight: bold;
+      font-size: 22px;
+    }
+
+    #nombre {
+      font-size: 8px;
+      text-align: center;
+    }
+
+    .numeros {
+      font-size: 8px;
+      display: inline;
+    }
+
+    .box {
+      width: 500px;
+      height: 187px;
+      margin-left: 150px;
+      margin-top: 10px;
+      position: absolute;
+      background: white;
+    }
+
+    .info{
+      background: linear-gradient(to right, #3480AF, #81DC42);
+      color: black;
+      width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 10px;
+      font-family: Comic, sans-serif;
+      padding: 7px;
+      padding-left: 20px;
+    }
+
+    .undercontainer {
+      color: white;
+      font-family: Comic, sans-serif;
+      font-size: 12px;
+      background-color: black;
+      padding-left: 4px;
+      padding-top: 2px;
+      border-top-right-radius: 5px;
+      width: 240px;
+      height:50px;
+    }
+
+  .ir-arriba {
+  	display:none;
+  	padding-left:10px;
+    padding-right:10px;
+    padding-top: 3px;
+    padding-bottom: 6px;
+  	background:black;
+  	font-size:30px;
+    font-family: bold;
+  	color:#fff;
+  	cursor:pointer;
+  	position: fixed;
+  	bottom:20px;
+  	right:20px;
+    border-radius: 20px;
+  }
+    </style>
+  </head>
+  <body background="imagenes/fondo.jpg">
+    <div class="container">
+      <div class="box">
+        <div style="float:left;height:92%; width: 33%; background:#f4931d; margin:10px;margin-left: 20px;font-family: Comic, sans-serif; border-radius:15px;line-height: 4px;">
+        <div>
+          <p style="float:left; margin-left:5px;font-size: 15px">1<br /><br /><br /><font size=1>(Número atómico)</font></p>
+          <p align="right"style="float:right; margin-right:5px;font-size: 15px">1,0<br /><br /><br /><font size=1>(Masa atómica)</font></p>
+        </div>
+        <br  />
+        <br  />
+        <br  />
+        <br  />
+        <br  />
+        <br  />
+        <p align="center" style="font-size:55px;font-weight: bold;">H<br  /><br  /><br  /><font size=1>(Símbolo químico)</font><br  /><br  /><br  /><br  /><br  /><font size=2>Hidrógeno<br /></font><font size=1>(Nombre)</font></p>
+        </div>
+        <div style="float:right; height:80%; width: 25%; background:white; margin:10px; font-family: Comic, sans-serif; font-size: 10px;">
+          <div style="width:10px;height:10px;background:#0987cc;float:left;margin-left:2px; margin-top:10px;"></div>
+          <p style="float:left; color: black;margin-left:2px">Metales de transición</p>
+          <br  /><br  /><br  />
+          <div style="width:10px;height:10px;background:#fab912;float:left;margin-left:2px; margin-top:10px;"></div>
+          <p style="float:left; color: black;margin-left:2px">Alcalinos térreos</p>
+          <br  /><br  /><br  />
+          <div style="width:10px;height:10px;background:#092647;float:left;margin-left:2px; margin-top:10px;"></div>
+          <p style="float:left; color: black;margin-left:2px">Metales alcalinos</p>
+          <br  /><br  /><br  />
+          <div style="width:10px;height:10px;background:#dbdcbd;float:left;margin-left:2px; margin-top:10px;"></div>
+          <p style="float:left; color: black;margin-left:2px">Lantánidos</p>
+          <br  /><br  /><br  />
+          <div style="width:10px;height:10px;background:#508173;float:left;margin-left:2px; margin-top:10px;"></div>
+          <p style="float:left; color: black;margin-left:2px">Actínidos</p>
+        </div>
+        <div style="float:right; height:100%; width: 25%; background:white; margin:10px; font-family: Comic, sans-serif; font-size: 10px;">
+          <div style="width:10px;height:10px;background:#206938;float:left;margin-left:2px; margin-top:10px;"></div>
+          <p style="float:left; color: black;margin-left:2px">Gases nobles</p>
+          <br  /><br  /><br  />
+          <div style="width:10px;height:10px;background:#a0a521;float:left;margin-left:2px; margin-top:10px;"></div>
+          <p style="float:left; color: black;margin-left:2px">Halógenos</p>
+          <br  /><br  /><br  />
+          <div style="width:10px;height:10px;background:#f4931d;float:left;margin-left:2px; margin-top:10px;"></div>
+          <p style="float:left; color: black;margin-left:2px">No metal</p>
+          <br  /><br  /><br  />
+          <div style="width:10px;height:10px;background:#ec1b43;float:left;margin-left:2px; margin-top:10px;"></div>
+          <p style="float:left; color: black;margin-left:2px">Metaloides</p>
+          <br  /><br  /><br  />
+          <div style="width:10px;height:10px;background:#8c3c8c;float:left;margin-left:2px; margin-top:10px;"></div>
+          <p style="float:left; color: black;margin-left:2px">Otros metales</p>
+        </div>
+      </div>
+      <div style="height: 36px;">
+        <div class="numh" style="float:left; margin-left:19px;">
+            <p style="background-color: black;border-radius: 5px;">Grupo 1<br />(I A)</p>
+        </div>
+        <div class="numh" style="float:right; margin-right:23px;">
+            <p style=" background-color: black; border-radius: 5px;">Grupo 18<br  />(VIII A)</p>
+        </div>
+      </div>
+      <div>
+        <div class="numh" style="float:left; margin-left:73px;margin-top:26px;position:absolute;">
+            <p style="background-color: black;border-radius: 5px;">Grupo 2<br />(II A)</p>
+        </div>
+        <div class="numh" style="margin-left:667px;margin-top:26px;position:absolute;">
+            <p style=" background-color: black; border-radius: 5px;">Grupo 13<br  />(III A)</p>
+        </div>
+        <div class="numh" style="margin-left:721px;margin-top:26px;position:absolute;">
+            <p style=" background-color: black; border-radius: 5px;">Grupo 14<br  />(IV A)</p>
+        </div>
+        <div class="numh" style="margin-left:775px;margin-top:26px;position:absolute;">
+            <p style=" background-color: black; border-radius: 5px;">Grupo 15<br  />(V A)</p>
+        </div>
+        <div class="numh" style="margin-left:829px;margin-top:26px;position:absolute;">
+            <p style=" background-color: black; border-radius: 5px;">Grupo 16<br  />(VI A)</p>
+        </div>
+        <div class="numh" style="margin-left:884px;margin-top:26px;position:absolute;">
+            <p style=" background-color: black; border-radius: 5px;">Grupo 17<br  />(VII A)</p>
+        </div>
+      </div>
+      <div>
+        <div class="numh" style="margin-left:127px;margin-top:155px;position:absolute;">
+            <p style="background-color: black;border-radius: 5px;">Grupo 3<br />(III B)</p>
+        </div>
+        <div class="numh" style="margin-left:181px;margin-top:155px;position:absolute;">
+            <p style=" background-color: black; border-radius: 5px;">Grupo 4<br  />(IV B)</p>
+        </div>
+        <div class="numh" style="margin-left:235px;margin-top:155px;position:absolute;">
+            <p style=" background-color: black; border-radius: 5px;">Grupo 5<br  />(V B)</p>
+        </div>
+        <div class="numh" style="margin-left:289px;margin-top:155px;position:absolute;">
+            <p style=" background-color: black; border-radius: 5px;">Grupo 6<br  />(VI B)</p>
+        </div>
+        <div class="numh" style="margin-left:343px;margin-top:155px;position:absolute;">
+            <p style=" background-color: black; border-radius: 5px;">Grupo 7<br  />(VII B)</p>
+        </div>
+        <div class="numh" style="margin-left:397px;margin-top:155px;position:absolute;">
+            <p style=" background-color: black; border-radius: 5px;">Grupo 8<br  />(VIII B)</p>
+        </div>
+        <div class="numh" style="margin-left:451px;margin-top:155px;position:absolute;">
+            <p style=" background-color: black; border-radius: 5px;">Grupo 9<br  />(VIII B)</p>
+        </div>
+        <div class="numh" style="margin-left:505px;margin-top:155px;position:absolute;">
+          <p style=" background-color: black; border-radius: 5px;">Grupo 10<br  />(VIII B)</p>
+        </div>
+        <div class="numh" style="margin-left:559px;margin-top:155px;position:absolute;">
+            <p style=" background-color: black; border-radius: 5px;">Grupo 11<br  />(I B)</p>
+        </div>
+        <div class="numh" style="margin-left:613px;margin-top:155px;position:absolute;">
+            <p style=" background-color: black; border-radius: 5px;">Grupo 12<br  />(II B)</p>
+        </div>
+      </div>
+      <div class="numv">
+        <p>1</p>
+      </div>
+      <div class="periodo">
+        <div class="elemento" id="hidrogeno" style="float:left; background-color: #f4931d;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp1</p>
+            <p style="float:right;">1,0&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">H</p>
+          <p id="nombre">Hidrógeno</p>
+        </div>
+        <div class="elemento" id="helio" style="float:right; background-color: #206938;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp2</p>
+            <p style="float:right;">4,0&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">He</p>
+          <p id="nombre" style="color:white">Helio</p>
+        </div>
+      </div>
+      <div class="numv">
+        <p>2</p>
+      </div>
+      <div class="periodo">
+        <div class="elemento" id="litio" style="float:left; background-color: #092647;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp3</p>
+            <p style="float:right;">6,9&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Li</p>
+          <p id="nombre" style="color:white">Litio</p>
+        </div>
+        <div class="elemento" id="berilio" style="float:left; background-color: #fab912;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp4</p>
+            <p style="float:right;">9,0&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">Be</p>
+          <p id="nombre">Berilio</p>
+        </div>
+        <div class="elemento" id="neon" style="float:right; background-color: #206938;">
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp10</p>
+            <p style="float:right;">20,2&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Ne</p>
+          <p id="nombre" style="color:white">Neón</p>
+        </div>
+        <div class="elemento" id="fluor" style="float:right; background-color: #a0a521;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp9</p>
+            <p style="float:right;">19,0&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">F</p>
+          <p id="nombre">Fluor</p>
+        </div>
+        <div class="elemento" id="oxigeno" style="float:right; background-color: #f4931d;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp8</p>
+            <p style="float:right;">15,9&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">O</p>
+          <p id="nombre">Oxígeno</p>
+        </div>
+        <div class="elemento" id="nitrogeno" style="float:right; background-color: #f4931d;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp7</p>
+            <p style="float:right;">14,0&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">N</p>
+          <p id="nombre">Nitrógeno</p>
+        </div>
+        <div class="elemento" id="carbono" style="float:right; background-color: #f4931d;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp6</p>
+            <p style="float:right;">12,0&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">C</p>
+          <p id="nombre">Carbono</p>
+        </div>
+        <div class="elemento" id="boro" style="float:right; background-color: #ec1b43;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp5</p>
+            <p style="float:right;">10,8&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">B</p>
+          <p id="nombre" style="color:white">Boro</p>
+        </div>
+      </div>
+      <div class="numv">
+        <p>3</p>
+      </div>
+      <div class="periodo">
+        <div class="elemento" id="sodio" style="float:left; background-color: #092647;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp11</p>
+            <p style="float:right;">23,0&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Na</p>
+          <p id="nombre" style="color:white">Sodio</p>
+        </div>
+        <div class="elemento" id="magnesio" style="float:left; background-color: #fab912;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp12</p>
+            <p style="float:right;">24,3&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">Mg</p>
+          <p id="nombre">Magnesio</p>
+        </div>
+        <div class="elemento" id="argon" style="float:right; background-color: #206938;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp18</p>
+            <p style="float:right;">39,9&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Ar</p>
+          <p id="nombre" style="color:white">Argon</p>
+        </div>
+        <div class="elemento" id="cloro" style="float:right; background-color: #a0a521;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp17</p>
+            <p style="float:right;">35,5&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">Cl</p>
+          <p id="nombre">Cloro</p>
+        </div>
+        <div class="elemento" id="azufre" style="float:right; background-color: #f4931d;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp16</p>
+            <p style="float:right;">32,1&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">S</p>
+          <p id="nombre">Azufre</p>
+        </div>
+        <div class="elemento" id="fosforo" style="float:right; background-color: #f4931d;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp15</p>
+            <p style="float:right;">31,0&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">P</p>
+          <p id="nombre">Fósforo</p>
+        </div>
+        <div class="elemento" id="silicio" style="float:right; background-color: #ec1b43;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp13</p>
+            <p style="float:right;">28,1&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Si</p>
+          <p id="nombre" style="color:white">Silicio</p>
+        </div>
+        <div class="elemento" id="aluminio" style="float:right; background-color: #8c3c8c;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp15</p>
+            <p style="float:right;">27,0&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Al</p>
+          <p id="nombre" style="color:white">Aluminio</p>
+        </div>
+      </div>
+      <div class="numv">
+        <p>4</p>
+      </div>
+      <div class="periodo">
+        <div class="elemento" id="potasio" style="float:left; background-color: #092647;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp19</p>
+            <p style="float:right;">39,1&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">K</p>
+          <p id="nombre" style="color:white">Potasio</p>
+        </div>
+        <div class="elemento" id="calcio" style="float:left; background-color: #fab912;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp20</p>
+            <p style="float:right;">40,1&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">Ca</p>
+          <p id="nombre">Calcio</p>
+        </div>
+        <div class="elemento" id="escandio" style="float:left; background-color: #0987cc;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp21</p>
+            <p style="float:right;">45,0&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Sc</p>
+          <p id="nombre" style="color:white">Escandio</p>
+        </div>
+        <div class="elemento" id="titanio" style="float:left; background-color: #0987cc;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp22</p>
+            <p style="float:right;">47,9&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Ti</p>
+          <p id="nombre" style="color:white">Titanio</p>
+        </div>
+        <div class="elemento" id="vanadio" style="float:left; background-color: #0987cc;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp23</p>
+            <p style="float:right;">50,9&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">V</p>
+          <p id="nombre" style="color:white">Vanadio</p>
+        </div>
+        <div class="elemento" id="cromo" style="float:left; background-color: #0987cc;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp24</p>
+            <p style="float:right;">52,0&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Cr</p>
+          <p id="nombre" style="color:white">Cromo</p>
+        </div>
+        <div class="elemento" id="manganeso" style="float:left; background-color: #0987cc;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp25</p>
+            <p style="float:right;">54,9&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Mn</p>
+          <p id="nombre" style="color:white">Manganeso</p>
+        </div>
+        <div class="elemento" id="hierro" style="float:left; background-color: #0987cc;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp26</p>
+            <p style="float:right;">55,8&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Fe</p>
+          <p id="nombre" style="color:white">Hierro</p>
+        </div>
+        <div class="elemento" id="cobalto" style="float:left; background-color: #0987cc;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp27</p>
+            <p style="float:right;">58,9&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Co</p>
+          <p id="nombre" style="color:white">Cobalto</p>
+        </div>
+        <div class="elemento" id="kripton" style="float:right; background-color: #206938;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp36</p>
+            <p style="float:right;">83,8&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Kr</p>
+          <p id="nombre" style="color:white">Kriptón</p>
+        </div>
+        <div class="elemento" id="bromo" style="float:right; background-color: #a0a521;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp35</p>
+            <p style="float:right;">79,9&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">Br</p>
+          <p id="nombre">Bromo</p>
+        </div>
+        <div class="elemento" id="selenio" style="float:right; background-color: #f4931d;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp34</p>
+            <p style="float:right;">79,0&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">Se</p>
+          <p id="nombre">Selenio</p>
+        </div>
+        <div class="elemento" id="arsenico" style="float:right; background-color: #ec1b43;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp33</p>
+            <p style="float:right;">74,9&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">As</p>
+          <p id="nombre" style="color:white">Arsénico</p>
+        </div>
+        <div class="elemento" id="germanio" style="float:right; background-color: #ec1b43;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp32</p>
+            <p style="float:right;">72,6&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Ge</p>
+          <p id="nombre" style="color:white">Germanio</p>
+        </div>
+        <div class="elemento" id="galio" style="float:right; background-color: #8c3c8c;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp31</p>
+            <p style="float:right;">69,7&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Ga</p>
+          <p id="nombre" style="color:white">Galio</p>
+        </div>
+        <div class="elemento" id="cinc" style="float:right; background-color: #0987cc;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp30</p>
+            <p style="float:right;">65,4&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Zn</p>
+          <p id="nombre" style="color:white">Cinc</p>
+        </div>
+        <div class="elemento" id="cobre" style="float:right; background-color: #0987cc;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp29</p>
+            <p style="float:right;">63,5&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Cu</p>
+          <p id="nombre" style="color:white">Cobre</p>
+        </div>
+        <div class="elemento" id="niquel" style="float:right; background-color: #0987cc;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp28</p>
+            <p style="float:right;">58,7&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Ni</p>
+          <p id="nombre" style="color:white">Niquel</p>
+        </div>
+      </div>
+      <div class="numv">
+        <p>5</p>
+      </div>
+      <div class="periodo">
+        <div class="elemento" id="rubidio" style="float:left; background-color: #092647;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp37</p>
+            <p style="float:right;">85,5&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Rb</p>
+          <p id="nombre" style="color:white">Rubidio</p>
+        </div>
+        <div class="elemento" id="estroncio" style="float:left; background-color: #fab912;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp38</p>
+            <p style="float:right;">87,6&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">Sr</p>
+          <p id="nombre">Estroncio</p>
+        </div>
+        <div class="elemento" id="itrio" style="float:left; background-color: #0987cc;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp39</p>
+            <p style="float:right;">88,9&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Y</p>
+          <p id="nombre" style="color:white">Itrio</p>
+        </div>
+        <div class="elemento" id="circonio" style="float:left; background-color: #0987cc;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp40</p>
+            <p style="float:right;">91,2&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Zr</p>
+          <p id="nombre" style="color:white">Circonio</p>
+        </div>
+        <div class="elemento" id="niobio" style="float:left; background-color: #0987cc;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp41</p>
+            <p style="float:right;">92,9&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Nb</p>
+          <p id="nombre" style="color:white">Niobio</p>
+        </div>
+        <div class="elemento" id="molibdeno" style="float:left; background-color: #0987cc;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp42</p>
+            <p style="float:right;">95,9&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Mo</p>
+          <p id="nombre" style="color:white">Molibdeno</p>
+        </div>
+        <div class="elemento" id="tecnecio" style="float:left; background-color: #0987cc;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp43</p>
+            <p style="float:right;">(99)&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Tc</p>
+          <p id="nombre" style="color:white">Tecnecio</p>
+        </div>
+        <div class="elemento" id="rutenio" style="float:left; background-color: #0987cc;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp44</p>
+            <p style="float:right;">101,1&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Ru</p>
+          <p id="nombre" style="color:white">Rutenio</p>
+        </div>
+        <div class="elemento" id="rodio" style="float:left; background-color: #0987cc;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp45</p>
+            <p style="float:right;">102,9&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Rh</p>
+          <p id="nombre" style="color:white">Rodio</p>
+        </div>
+        <div class="elemento" id="xenon" style="float:right; background-color: #206938;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp54</p>
+            <p style="float:right;">131,3&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Xe</p>
+          <p id="nombre" style="color:white">Xenón</p>
+        </div>
+        <div class="elemento" id="yodo" style="float:right; background-color: #a0a521;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp53</p>
+            <p style="float:right;">126,9&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">I</p>
+          <p id="nombre">Yodo</p>
+        </div>
+        <div class="elemento" id="telurio" style="float:right; background-color: #ec1b43;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp52</p>
+            <p style="float:right;">127,6&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Te</p>
+          <p id="nombre" style="color:white">Telurio</p>
+        </div>
+        <div class="elemento" id="antimonio" style="float:right; background-color: #ec1b43;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp51</p>
+            <p style="float:right;">121,8&nbsp</p>
+            <br />
+          </div>
+          <p id="titulo" style="color:white">Sb</p>
+          <p id="nombre" style="color:white">Antimonio</p>
+        </div>
+        <div class="elemento" id="estanio" style="float:right; background-color: #8c3c8c;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp50</p>
+            <p style="float:right;">118,7&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Sn</p>
+          <p id="nombre" style="color:white">Estaño</p>
+        </div>
+        <div class="elemento" id="indio" style="float:right; background-color: #8c3c8c;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp49</p>
+            <p style="float:right;">118,7&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">In</p>
+          <p id="nombre" style="color:white">Indio</p>
+        </div>
+        <div class="elemento" id="cadmio" style="float:right; background-color: #0987cc;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp48</p>
+            <p style="float:right;">112,4&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Cd</p>
+          <p id="nombre" style="color:white">Cadmio</p>
+        </div>
+        <div class="elemento" id="plata" style="float:right; background-color: #0987cc;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp47</p>
+            <p style="float:right;">107,9&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Ag</p>
+          <p id="nombre" style="color:white">Plata</p>
+        </div>
+        <div class="elemento" id="paladio" style="float:right; background-color: #0987cc;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp46</p>
+            <p style="float:right;">106,4&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Pd</p>
+          <p id="nombre" style="color:white">Paladio</p>
+        </div>
+      </div>
+      <div class="numv">
+        <p>6</p>
+      </div>
+      <div class="periodo">
+        <div class="elemento" id="cesio" style="float:left; background-color: #092647;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp55</p>
+            <p style="float:right;">132,9&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Cs</p>
+          <p id="nombre" style="color:white">Cesio</p>
+        </div>
+        <div class="elemento" id="bario" style="float:left; background-color: #fab912;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp56</p>
+            <p style="float:right;">137,3&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">Ba</p>
+          <p id="nombre">Bario</p>
+        </div>
+        <div class="elemento" id="lutecio" style="float:left; background-color: #0987cc;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp71</p>
+            <p style="float:right;">175,0&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Lu</p>
+          <p id="nombre" style="color:white">Lutecio</p>
+        </div>
+        <div class="elemento" id="hafnio" style="float:left; background-color: #0987cc;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp72</p>
+            <p style="float:right;">178,5&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Hf</p>
+          <p id="nombre" style="color:white">Hafnio</p>
+        </div>
+        <div class="elemento" id="tantalo" style="float:left; background-color: #0987cc;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp73</p>
+            <p style="float:right;">180,9&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Ta</p>
+          <p id="nombre" style="color:white">Tantalo</p>
+        </div>
+        <div class="elemento" id="wolframio" style="float:left; background-color: #0987cc;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp74</p>
+            <p style="float:right;">183,8&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">W</p>
+          <p id="nombre" style="color:white">Wolframio</p>
+        </div>
+        <div class="elemento" id="renio" style="float:left; background-color: #0987cc;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp75</p>
+            <p style="float:right;">186,2&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Re</p>
+          <p id="nombre" style="color:white">Renio</p>
+        </div>
+        <div class="elemento" id="osmio" style="float:left; background-color: #0987cc;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp76</p>
+            <p style="float:right;">190,2&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Os</p>
+          <p id="nombre" style="color:white">Osmio</p>
+        </div>
+        <div class="elemento" id="iridio" style="float:left; background-color: #0987cc;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp77</p>
+            <p style="float:right;">192,2&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Ir</p>
+          <p id="nombre" style="color:white">Iridio</p>
+        </div>
+        <div class="elemento" id="radon" style="float:right; background-color: #206938;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp86</p>
+            <p style="float:right;">(222)&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Rn</p>
+          <p id="nombre" style="color:white">Radón</p>
+        </div>
+        <div class="elemento" id="astato" style="float:right; background-color: #a0a521;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp85</p>
+            <p style="float:right;">(210)&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">At</p>
+          <p id="nombre">Astato</p>
+        </div>
+        <div class="elemento" id="polonio" style="float:right; background-color: #ec1b43;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp84</p>
+            <p style="float:right;">(210)&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Po</p>
+          <p id="nombre" style="color:white">Polonio</p>
+        </div>
+        <div class="elemento" id="bismuto" style="float:right; background-color: #8c3c8c;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp83</p>
+            <p style="float:right;">209,2&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Bi</p>
+          <p id="nombre" style="color:white">Bismuto</p>
+        </div>
+        <div class="elemento" id="plomo" style="float:right; background-color: #8c3c8c;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp82</p>
+            <p style="float:right;">207,2&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Pb</p>
+          <p id="nombre" style="color:white">Plomo</p>
+        </div>
+        <div class="elemento" id="talio" style="float:right; background-color: #8c3c8c;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp81</p>
+            <p style="float:right;">204,4&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Tl</p>
+          <p id="nombre" style="color:white">Talio</p>
+        </div>
+        <div class="elemento" id="mercurio" style="float:right; background-color: #0987cc;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp80</p>
+            <p style="float:right;">200,6&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Hg</p>
+          <p id="nombre" style="color:white">Mercurio</p>
+        </div>
+        <div class="elemento" id="oro" style="float:right; background-color: #0987cc;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp79</p>
+            <p style="float:right;">197,0&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Au</p>
+          <p id="nombre" style="color:white">Oro</p>
+        </div>
+        <div class="elemento" id="platino" style="float:right; background-color: #0987cc;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp78</p>
+            <p style="float:right;">195,1&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Pt</p>
+          <p id="nombre" style="color:white">Platino</p>
+        </div>
+      </div>
+      <div class="numv">
+        <p>7</p>
+      </div>
+      <div class="periodo">
+        <div class="elemento" id="francio" style="float:left; background-color: #092647;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp87</p>
+            <p style="float:right;">233&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Fr</p>
+          <p id="nombre" style="color:white">Francio</p>
+        </div>
+        <div class="elemento" id="radio" style="float:left; background-color: #fab912;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp88</p>
+            <p style="float:right;">(266)&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">Ra</p>
+          <p id="nombre">Radio</p>
+        </div>
+        <div class="elemento" id="laurencio" style="float:left; background-color: #0987cc;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp103</p>
+            <p style="float:right;">(262)&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Lr</p>
+          <p id="nombre" style="color:white">Laurencio</p>
+        </div>
+        <div class="elemento" id="ruthefordio" style="float:left; background-color: #0987cc;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp104</p>
+            <p style="float:right;">(261,1)&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Rf</p>
+          <p id="nombre" style="color:white">Rutherfordio</p>
+        </div>
+        <div class="elemento" id="dubnio" style="float:left; background-color: #0987cc;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp105</p>
+            <p style="float:right;">(262,1)&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Db</p>
+          <p id="nombre" style="color:white">Dubnio</p>
+        </div>
+        <div class="elemento" id="seaborgio" style="float:left; background-color: #0987cc;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp106</p>
+            <p style="float:right;">(263,1)&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Sg</p>
+          <p id="nombre" style="color:white">Seaborgio</p>
+        </div>
+        <div class="elemento" id="bohrio" style="float:left; background-color: #0987cc;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp107</p>
+            <p style="float:right;">(264,1)&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Bh</p>
+          <p id="nombre" style="color:white">Bohrio</p>
+        </div>
+        <div class="elemento" id="hassio" style="float:left; background-color: #0987cc;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp108</p>
+            <p style="float:right;">(277)&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Hs</p>
+          <p id="nombre" style="color:white">Hassio</p>
+        </div>
+        <div class="elemento" id="meitnerio" style="float:left; background-color: #0987cc;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp109</p>
+            <p style="float:right;">(268)&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Mt</p>
+          <p id="nombre" style="color:white">Meitnerio</p>
+        </div>
+        <div class="elemento" id="oganeson" style="float:right; background-color: #206938;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp118</p>
+            <p style="float:right;">(294)&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Og</p>
+          <p id="nombre" style="color:white">Oganesón</p>
+        </div>
+        <div class="elemento" id="teneso" style="float:right; background-color: #a0a521;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp117</p>
+            <p style="float:right;">(294)&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">Ts</p>
+          <p id="nombre">Teneso</p>
+        </div>
+        <div class="elemento" id="livermorio" style="float:right; background-color: #8c3c8c;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp116</p>
+            <p style="float:right;">(292)&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Lv</p>
+          <p id="nombre" style="color:white">Livermorio</p>
+        </div>
+        <div class="elemento" id="moscovio" style="float:right; background-color: #8c3c8c;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp115</p>
+            <p style="float:right;">288&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Mc</p>
+          <p id="nombre" style="color:white">Moscovio</p>
+        </div>
+        <div class="elemento" id="flerovio" style="float:right; background-color: #8c3c8c;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp114</p>
+            <p style="float:right;">(289)&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Fl</p>
+          <p id="nombre" style="color:white">Flerovio</p>
+        </div>
+        <div class="elemento" id="nihonio" style="float:right; background-color: #8c3c8c;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp113</p>
+            <p style="float:right;">(284)&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Nh</p>
+          <p id="nombre" style="color:white">Nihonio</p>
+        </div>
+        <div class="elemento" id="copernicio" style="float:right; background-color: #0987cc;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp112</p>
+            <p style="float:right;">(285)&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Cn</p>
+          <p id="nombre" style="color:white">Copernicio</p>
+        </div>
+        <div class="elemento" id="roentgenio" style="float:right; background-color: #0987cc;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp111</p>
+            <p style="float:right;">(272)&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Rg</p>
+          <p id="nombre" style="color:white">Roentgenio</p>
+        </div>
+        <div class="elemento" id="darmstatio" style="float:right; background-color: #0987cc;">
+          <br />
+          <div class="numeros" style="color:white">
+            <p style="float:left;">&nbsp&nbsp110</p>
+            <p style="float:right;">(271)&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo" style="color:white">Ds</p>
+          <p id="nombre" style="color:white">Darmstatio</p>
+        </div>
+      </div>
+      <br />
+      <div class="periodo">
+        <div class="numv" style="margin-left:90px">
+          <p>6</p>
+        </div>
+        <div class="elemento" style="float:left; background-color: transparent;">
+        </div>
+        <div class="elemento" style="float:left; background-color: transparent;">
+        </div>
+        <div class="elemento" id="lantano" style="float:left; background-color: #dbdcbd;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp57</p>
+            <p style="float:right;">138,9&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">La</p>
+          <p id="nombre">Lantano</p>
+        </div>
+        <div class="elemento" id="cerio" style="float:left; background-color: #dbdcbd;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp58</p>
+            <p style="float:right;">140,1&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">Ce</p>
+          <p id="nombre">Cerio</p>
+        </div>
+        <div class="elemento" id="praseodimio" style="float:left; background-color: #dbdcbd;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp59</p>
+            <p style="float:right;">140,9&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">Pr</p>
+          <p id="nombre">Praseodimio</p>
+        </div>
+        <div class="elemento" id="neodimio" style="float:left; background-color: #dbdcbd;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp60</p>
+            <p style="float:right;">144,2&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">Nd</p>
+          <p id="nombre">Neodimio</p>
+        </div>
+        <div class="elemento" id="prometio" style="float:left; background-color: #dbdcbd;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp61</p>
+            <p style="float:right;">(147)&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">Pm</p>
+          <p id="nombre">Prometio</p>
+        </div>
+        <div class="elemento" id="samario" style="float:left; background-color: #dbdcbd;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp62</p>
+            <p style="float:right;">150,3&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">Sm</p>
+          <p id="nombre">Samario</p>
+        </div>
+        <div class="elemento" id="europio" style="float:left; background-color: #dbdcbd;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp63</p>
+            <p style="float:right;">152,0&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">Eu</p>
+          <p id="nombre">Europio</p>
+        </div>
+        <div class="elemento" style="float:right; background-color: transparent;">
+
+        </div>
+        <div class="elemento" style="float:right; background-color: transparent;">
+
+        </div>
+        <div class="elemento" id="iterbio" style="float:right; background-color: #dbdcbd;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp70</p>
+            <p style="float:right;">175,0&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">Yb</p>
+          <p id="nombre">Iterbio</p>
+        </div>
+        <div class="elemento" id="tulio" style="float:right; background-color: #dbdcbd;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp69</p>
+            <p style="float:right;">168,9&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">Tm</p>
+          <p id="nombre">Tulio</p>
+        </div>
+        <div class="elemento" id="erbio" style="float:right; background-color: #dbdcbd;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp68</p>
+            <p style="float:right;">167,3&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">Er</p>
+          <p id="nombre">Erbio</p>
+        </div>
+        <div class="elemento" id="holmio" style="float:right; background-color: #dbdcbd;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp67</p>
+            <p style="float:right;">164,9&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">Ho</p>
+          <p id="nombre">Holmio</p>
+        </div>
+        <div class="elemento" id="disprosio" style="float:right; background-color: #dbdcbd;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp66</p>
+            <p style="float:right;">162,5&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">Dy</p>
+          <p id="nombre">Disprosio</p>
+        </div>
+        <div class="elemento" id="terbio" style="float:right; background-color: #dbdcbd;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp65</p>
+            <p style="float:right;">158,9&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">Tb</p>
+          <p id="nombre">Terbio</p>
+        </div>
+        <div class="elemento" id="gadolinio" style="float:right; background-color: #dbdcbd;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp64</p>
+            <p style="float:right;">157,2&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">Gd</p>
+          <p id="nombre">Gadolinio</p>
+        </div>
+      </div>
+      <div class="periodo">
+        <div class="numv" style="margin-left:90px">
+          <p>7</p>
+        </div>
+        <div class="elemento" style="float:left; background-color: transparent;">
+        </div>
+        <div class="elemento" style="float:left; background-color: transparent;">
+        </div>
+        <div class="elemento" id="actinio" style="float:left; background-color: #508173;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp89</p>
+            <p style="float:right;">(227)&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">Ac</p>
+          <p id="nombre">Actinio</p>
+        </div>
+        <div class="elemento" id="torio" style="float:left; background-color: #508173;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp90</p>
+            <p style="float:right;">232,0&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">Th</p>
+          <p id="nombre">Torio</p>
+        </div>
+        <div class="elemento" id="proactinio" style="float:left; background-color: #508173;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp91</p>
+            <p style="float:right;">(231)&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">Pa</p>
+          <p id="nombre">proactinio</p>
+        </div>
+        <div class="elemento" id="uranio" style="float:left; background-color: #508173;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp92</p>
+            <p style="float:right;">238,0&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">U</p>
+          <p id="nombre">Uranio</p>
+        </div>
+        <div class="elemento" id="neptunio" style="float:left; background-color: #508173;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp93</p>
+            <p style="float:right;">(237)&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">Np</p>
+          <p id="nombre">Neptunio</p>
+        </div>
+        <div class="elemento" id="plutonio" style="float:left; background-color: #508173;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp94</p>
+            <p style="float:right;">(242)&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">Pu</p>
+          <p id="nombre">Plutonio</p>
+        </div>
+        <div class="elemento" id="americio" style="float:left; background-color: #508173;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp95</p>
+            <p style="float:right;">(243)&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">Am</p>
+          <p id="nombre">Americio</p>
+        </div>
+        <div class="elemento" style="float:right; background-color: transparent;">
+
+        </div>
+        <div class="elemento" style="float:right; background-color: transparent;">
+
+        </div>
+        <div class="elemento" id="nobelio" style="float:right; background-color: #508173;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp102</p>
+            <p style="float:right;">(259)&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">No</p>
+          <p id="nombre">Nobelio</p>
+        </div>
+        <div class="elemento" id="mendelevio" style="float:right; background-color: #508173;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp101</p>
+            <p style="float:right;">(256)&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">Md</p>
+          <p id="nombre">Mendelevio</p>
+        </div>
+        <div class="elemento" id="fermio" style="float:right; background-color: #508173;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp100</p>
+            <p style="float:right;">(257)&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">Fm</p>
+          <p id="nombre">Fermio</p>
+        </div>
+        <div class="elemento" id="einstenio" style="float:right; background-color: #508173;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp99</p>
+            <p style="float:right;">(252)&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">Es</p>
+          <p id="nombre">Einstenio</p>
+        </div>
+        <div class="elemento" id="californio" style="float:right; background-color: #508173;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp98</p>
+            <p style="float:right;">(251)&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">Cf</p>
+          <p id="nombre">Californio</p>
+        </div>
+        <div class="elemento" id="berquelio" style="float:right; background-color: #508173;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp97</p>
+            <p style="float:right;">(247)&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">Bk</p>
+          <p id="nombre">Berquelio</p>
+        </div>
+        <div class="elemento" id="curio" style="float:right; background-color: #508173;">
+          <br />
+          <div class="numeros">
+            <p style="float:left;">&nbsp&nbsp96</p>
+            <p style="float:right;">(247)&nbsp</p>
+          </div>
+          <br />
+          <p id="titulo">Cm</p>
+          <p id="nombre">Curio</p>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="info" id="info"></div>
+    <br />
+    <div class="undercontainer">
+      <p>Para volver al menu principal clickee <a class="volver" href="index.html">aquí</a></p>
+    </div>
+    <div class="ir-arriba">↑</div>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="interactivo.js"></script>
+  </body>
+</html>

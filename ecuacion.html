@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    h1 {
+      background-color: black;
+      color: white;
+      font-family: Impact, sans-serif;
+      font-size: 50px;
+      width: 500px;
+      border-radius: 5px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .container {
+      background-color: black;
+      height: 400px;
+      border: solid;
+      width: 900px;
+      border-radius: 5px;
+      margin-left: auto;
+      margin-right: auto;
+      border-top-width: 30px;
+      border-left-width: 50px;
+      border-right-width: 50px;
+    }
+
+    .box {
+      height: 260px;
+      width: 40%;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #0B4C5F;
+      overflow-y: scroll;
+    }
+
+    #title {
+      background-color: white;
+      color: black;
+      font-family: Impact, sans-serif;
+      text-align: center;
+      margin-top: 0px;
+    }
+
+    #aqui {
+      font-weight: 150;
+      font-size: 10px;
+      font-family: sans-serif;
+      color:#333333;
+      padding-top:4px;
+      padding-bottom:4px;
+      padding-left:4px;
+      padding-right:4px;
+      background-color:#FFD27D;
+      border-color: #FFD27D;
+      border-width: 3px;
+      border-style: solid;
+      border-radius:35px;
+    }
+
+    #enviar {
+      font-weight: 150;
+      font-size: 10px;
+      font-family: sans-serif;
+      color:#333333;
+      padding-top:4px;
+      padding-bottom:4px;
+      padding-left:10px;
+      padding-right:10px;
+      background-color:#FFD27D;
+      border-color: #FFD27D;
+      border-width: 3px;
+      border-style: solid;
+      border-radius:35px;
+      cursor: pointer;
+    }
+
+    #undercontainer {
+      color: white;
+      font-family: sans-serif;
+      font-size: 10px;
+      float: right;
+    }
+
+    hr {
+      border: 2px solid black;
+    }
+
+    a {
+      text-decoration: none;
+      font-weight: 150;
+      font-size: 10px;
+      font-family: sans-serif;
+      color:#333333;
+      padding-top:4px;
+      padding-bottom:4px;
+      padding-left:4px;
+      padding-right:4px;
+      background-color:#FFD27D;
+      border-color: #FFD27D;
+      border-width: 3px;
+      border-style: solid;
+      border-radius:35px;
+    }
+
+    #formulas {
+      font-family: courier, sans-serif;
+      color: white;
+    }
+
+    #resultados {
+      font-family: courier, sans-serif;
+      color: white;
+    }
+
+    #clean {
+      font-weight: 150;
+      font-size: 10px;
+      font-family: sans-serif;
+      color:#333333;
+      padding-top:4px;
+      padding-bottom:4px;
+      padding-left:10px;
+      padding-right:10px;
+      background-color:#FFD27D;
+      border-color: #FFD27D;
+      border-width: 3px;
+      border-style: solid;
+      border-radius:35px;
+      cursor: pointer;
+    }
+
+    </style>
+    <meta charset="utf-8">
+    <title>Ecuación de formación</title>
+  </head>
+  <body background="imagenes/fondo.jpg">
+    <h1><center>Ecuación de formación</center></h1>
+    <div class="container">
+      <center><input type="text" placeholder="Ingrese aqui su compuesto" id="com">&nbsp&nbsp<button id="enviar">Enviar</button></center>
+      <br />
+      <br />
+
+      <p id="title" style="float:left; width: 40%;">Compuesto</p>
+      <p id="title" style="float:right; width: 40%;">Resultado</p>
+        <div class="box" style="float: left;" id="box1" onscroll="bajarIzq()">
+          <p id="formulas"></p>
+        </div>
+        <div class="box" style="float: right;" id="box2" onscroll="bajarDer()">
+          <p id="resultados"></p>
+        </div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <center><button id="clean" onclick="limpiarContenedores()">Limpiar</button></center>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <p id="undercontainer">Para volver al menu principal clickee <a href="index.html">aquí</a></p>
+    </div>
+    <script src="tabla.js"></script>
+    <script src="sistema.js"></script>
+  </body>
+</html>
